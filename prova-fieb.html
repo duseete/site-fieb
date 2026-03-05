@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Prova exemplo FIEB</title>
+<link rel="stylesheet" href="style.css">
+
+<script>
+
+function corrigir(){
+
+let pontos = 0
+
+let q1 = document.querySelector('input[name="q1"]:checked')
+let q2 = document.querySelector('input[name="q2"]:checked')
+let q3 = document.querySelector('input[name="q3"]:checked')
+
+if(q1 && q1.value == "c"){pontos++}
+if(q2 && q2.value == "a"){pontos++}
+if(q3 && q3.value == "b"){pontos++}
+
+document.getElementById("resultado").innerHTML =
+"Você acertou " + pontos + " de 3 questões"
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>Simulado da Prova da FIEB</h2>
+
+</header>
+
+<section>
+
+<h3>Questão 1</h3>
+
+<p>Quanto é 20% de 200?</p>
+
+<label><input type="radio" name="q1" value="a"> A) 10</label><br>
+<label><input type="radio" name="q1" value="b"> B) 20</label><br>
+<label><input type="radio" name="q1" value="c"> C) 40</label><br>
+<label><input type="radio" name="q1" value="d"> D) 60</label>
+
+<br><br>
+
+<h3>Questão 2</h3>
+
+<p>Leia o texto:</p>
+
+<p>
+"A leitura é uma das formas mais importantes
+de adquirir conhecimento."
+</p>
+
+<p>Qual é a ideia principal do texto?</p>
+
+<label><input type="radio" name="q2" value="a"> A) A leitura ajuda a adquirir conhecimento</label><br>
+<label><input type="radio" name="q2" value="b"> B) A leitura é difícil</label><br>
+<label><input type="radio" name="q2" value="c"> C) O conhecimento não é importante</label><br>
+<label><input type="radio" name="q2" value="d"> D) Ler não ajuda nos estudos</label>
+
+<br><br>
+
+<h3>Questão 3</h3>
+
+<p>15 + 27 = ?</p>
+
+<label><input type="radio" name="q3" value="a"> A) 32</label><br>
+<label><input type="radio" name="q3" value="b"> B) 42</label><br>
+<label><input type="radio" name="q3" value="c"> C) 37</label><br>
+<label><input type="radio" name="q3" value="d"> D) 40</label>
+
+<br><br>
+
+<button onclick="corrigir()">Corrigir prova</button>
+
+<h2 id="resultado"></h2>
+
+</section>
+
+</body>
+
+</html>
